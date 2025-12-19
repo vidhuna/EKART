@@ -13,4 +13,5 @@ public class UserRepository extends JpaRepository<User, Long> {
 
    @Query("SELECT u FROM User u WHERE u.username = ?1 OR u.email = ?2")
    Optional<User> findByUsernameOrEmail(@Param("username") String username, @Param("email") String email);
+   
 }
